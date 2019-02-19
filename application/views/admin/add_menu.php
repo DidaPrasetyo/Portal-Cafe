@@ -2,30 +2,30 @@
 <html>
 <body>
 	<div class="form">
-		<form method="POST" action="" enctype="multipart/form-data">
+		<form method="POST" action="<?php echo base_url(). 'input/input_menu'?>" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="name"> Nama Produk : </label>
-				<input type="text" class="form-control" id="name" name="pname">
+				<input type="text" class="form-control" id="name" name="name">
 			</div>
 			<div class="form-group">
 				<label for="price">  Harga Produk : </label>
-				<input type="number" class="form-control" id="price" name="pprice">
+				<input type="number" class="form-control" id="price" name="price">
 			</div>
 			<div class="form-group">
 				<label for="desc"> Keterangan : </label>
-				<textarea name="pdesc" class="form-control resize" id="desc"></textarea>
+				<textarea name="desc" class="form-control resize" id="desc"></textarea>
 			</div>
 			<div class="form-group">
 				<label for="type"> Kategori : </label>
-				<select name="ptype" class="custom-select" id="type">
+				<select name="type" class="custom-select" id="type">
 					<option value="food">Makanan</option>
 					<option value="beverages">Minuman</option>
 				</select>
 			</div>
 			<div class="form-group">
 				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="customFile" name="ppict">
-					<label class="custom-file-label" for="customFile">Choose Picture</label>
+					<input type="file" class="custom-file-input" id="img" name="img">
+					<label class="custom-file-label" for="customFile"></label>
 				</div>
 			</div>
 			<div class="form-group">

@@ -10,19 +10,19 @@
 	<!-- HEADER SECTION -->
 	<ul class="nav justify-content-center">
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url().'home/beranda' ?>">Home</a>
+			<a class="nav-link" href="<?php echo base_url().'home/beranda' ?>">Beranda</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url().'home/gallery' ?>">Gallery</a>
+			<a class="nav-link" href="<?php echo base_url().'home/gallery' ?>">Galeri</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(). 'home/menu' ?>">Food & Drink</a>
+			<a class="nav-link" href="<?php echo base_url(). 'home/menu' ?>">Menu Cafe</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(). 'home/location' ?>">Location</a>
+			<a class="nav-link" href="<?php echo base_url(). 'home/location' ?>">Lokasi</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(). 'home/contact' ?>">Contact</a>
+			<a class="nav-link" href="<?php echo base_url(). 'home/contact' ?>">Kontak</a>
 		</li>
 	</ul>
 	<!-- HEADER SECTION -->

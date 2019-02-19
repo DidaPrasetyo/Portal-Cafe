@@ -10,34 +10,45 @@ class input extends CI_Controller {
 	}
 
 	public function input_admin(){
-		$name = $this->input->post('name');
-		$uname = $this->input->post('username');
-		$pass = $this->input->post('pass');
+		$name	=	$this->input->post('name');
+		$uname	=	$this->input->post('username');
+		$pass	=	$this->input->post('pass');
 
 		$data = array(
-			'nama' => $name,
-			'username' => $uname,
-			'password' => md5($pass)
+			'nama'		=>	$name,
+			'username'	=>	$uname,
+			'password'	=>	md5($pass)
 		);
 		$this->input_m->add_data($data,'admin');
 		redirect('admenu/addadmin');
 	}
-	public function input_menu(){
-		$data = array(
-			$pname = $this->input->post('pname'),
-			$pharga = $this->input->post('pprice'),
-			$pket = $this->input->post('pdesc'),
-			$ptipe = $this->input->post('ptype')
-		);
 
-		if($this->input->post('submit')){
-			$upload = $this->input_m->img_upload();
-			if($upload['result'] == "success"){
-				$this->input_m->upload_menu($upload);
-				redirect('admenu/add_menu');
-			}else{
-				$data['message'] = $upload['error'];
-			}
-		}
+	public function input_menu(){
+		$config['upload_path']		=	'./img/';
+		$config['allowed_types']	=	'gif|jpg|png';
+		$config['file_name']		=	$this->input->post('name');
+		$config['overwrite']		=	true;
+		// $config['max_width']		= 1024;
+		// $config['max_height']	= 768;
+
+		$this->load->library('upload', $config);
+		$this->upload->do_upload('img');
+		$this->upload->data();
+		$name	=	$this->input->post('name');
+		$price	=	$this->input->post('price');
+		$desc	=	$this->input->post('desc');
+		$type	=	$this->input->post('type');
+		$img	=	$this->upload->data("file_name");
+
+		$data = array(
+			'product_nama'	=>	$name,
+			'product_price'	=>	$price,
+			'product_desc'	=>	$desc,
+			'product_type'	=>	$type,
+			'product_pict'	=>	$img
+		);
+		$this->input_m->add_data($data,'product');
+		redirect('admenu/addmenu');
+		
 	}
 }

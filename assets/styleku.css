@@ -415,37 +415,33 @@ img.ikone {
   height: 34px;
   margin-top: 80px;
   text-align: center;
-  font-family: Inter UI;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
   font-size: 28px;
-  text-align: center;
   margin-left: 475px;
   color: #3A3131;
 }
 
 .desc-section {
-  width: 426px;
+  width: 450px;
   height: 62px;
-  margin-left: 345px;
+  margin-left: 325px;
   margin-top: 20px;
-
-  font-family: Inter UI;
-  font-style: normal;
-  font-weight: normal;
+  font-family: Roboto;
   line-height: 29px;
   font-size: 16px;
   text-align: center;
-
   color: #B3B3B3;
 }
 
-.mapsbox {
+.bg-maps {
   height: 350px;
   width: 700px;
-  background: #979797;
   margin-left: 200px;
+  object-fit: cover;
+  margin-top: 10px;
 
 }
 
@@ -456,7 +452,25 @@ img.ikone {
   color: #3D3D49;
 }
 
+.btn-map:hover {
+  padding: 20px 40px;
+  border: 0px;
+  box-sizing: border-box;
+  color: white;
+  background: #3D3D49;
+  text-decoration: none;
+}
+
 .button-maps {
-  margin-top: 50px;
+  margin-top: 55px;
   margin-left: 470px;
+}
+
+.alamat-cafe {
+  text-align: center;
+  width: 700px;
+  margin-left: 200px;
+  line-height: 32px;
+  margin-top: 50px;
+  color: #3D3D49;
 }
