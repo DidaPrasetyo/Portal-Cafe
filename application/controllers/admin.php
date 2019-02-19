@@ -5,7 +5,7 @@ class admin extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();		
-		$this->load->model('admin_m');
+		$this->load->model('input_m');
 	}
 
 	public function index(){
@@ -23,7 +23,7 @@ class admin extends CI_Controller {
 			'username' => $username,
 			'password' => md5($password)
 		);
-		$cek = $this->admin_m->cek_login("admin",$where)->num_rows();
+		$cek = $this->input_m->cek_login("admin",$where)->num_rows();
 		if($cek > 0){
 
 			$data_session = array(

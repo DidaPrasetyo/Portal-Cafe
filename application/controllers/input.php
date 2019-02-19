@@ -9,6 +9,21 @@ class input extends CI_Controller {
 		$this->load->helper('form','url');
 	}
 
+	public function input_comment(){
+		$nama	=	 $this->input->post('nama');
+		$email	=	 $this->input->post('email');
+		$com	=	 $this->input->post('kritsar');
+
+		$data = array(
+			'ul_nama'	=>	$nama,
+			'ul_email'	=>	$email,
+			'ul_ulasan'	=>	$com
+		);
+
+		$this->input_m->add_data($data,'ulasan');
+		redirect('home/beranda');
+	}
+
 	public function input_admin(){
 		$name	=	$this->input->post('name');
 		$uname	=	$this->input->post('username');
@@ -49,6 +64,13 @@ class input extends CI_Controller {
 		);
 		$this->input_m->add_data($data,'product');
 		redirect('admenu/addmenu');
-		
+	}
+
+	public function delet($ul_id){
+		$table	=	'ulasan';
+		$col	=	'ul_id';
+		$where	=	$ul_id;
+		$this->input_m->delet($table, $col, $where);
+		redirect('admenu/comment');
 	}
 }

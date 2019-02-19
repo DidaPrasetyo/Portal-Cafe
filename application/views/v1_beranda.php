@@ -62,12 +62,14 @@
 				<div class="sub">Kritik & Saran</div>
 				<div class="bsub">Berikut adalah hal yang bisa anda ketahui<br>
 				tentang Portal Cafe</div>
-				<div class="krisar-kolom">
-					<div><input type="text" name="nama" placeholder="Masukkan nama anda ..." class="kolom-nama"></div>
-					<div><input type="email" name="email" placeholder="Masukkan email anda ..." class="kolom-email"></div>
-					<div><textarea name="kritsar" placeholder="Kritik dan Saran Anda ..." class="kolom-krisar"></textarea></div>
-					<div><input type="submit" name="kirim" class="btn-kirim"></div>
-				</div>
+				<form method="POST" action="<?php echo base_url(). 'input/input_comment' ?>">
+					<div class="krisar-kolom">
+						<div><input type="text" name="nama" placeholder="Masukkan nama anda ..." class="kolom-nama"></div>
+						<div><input type="email" name="email" placeholder="Masukkan email anda ..." class="kolom-email"></div>
+						<div><textarea name="kritsar" placeholder="Kritik dan Saran Anda ..." class="kolom-krisar"></textarea></div>
+						<div><input type="submit" name="kirim" class="btn-kirim"></div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

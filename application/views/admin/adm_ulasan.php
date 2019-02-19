@@ -21,25 +21,23 @@
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Ulasan</th>
+                <th>Aksi</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>Ulasan</th>
-              </tr>
-            </tfoot>
             <tbody>
               <?php $no=1;
-              foreach ($nama->result() as $row) {
+              foreach ($id->result() as $row) {
                 ?>
                 <tr>
                   <td><center><?php echo $this->session->userdata('row')+$no++;?></center></td>
                   <td><?php echo ucwords($row->ul_nama);?></td>
                   <td><?php echo ucwords($row->ul_email);?></td>
                   <td><?php echo ucwords($row->ul_ulasan);?></td>
+                  <td>
+                    <a title="Delete User" href="<?php echo base_url(); ?>input/delet/<?php echo$row->ul_id; ?>" class="btn btn-small text-danger">
+                      <i class="fas fa-trash"></i> Hapus
+                    </a>
+                  </td>
                 </tr>
               <?php } ?>
             </tbody>
@@ -47,13 +45,10 @@
         </div>
       </div>
     </div>
-  </div>
-
-
+  </div> 
 </body>
 <script src="../assets/jquery/jquery.min.js"></script>
 <script src="../assets/datatables/jquery.dataTables.js"></script>
 <script src="../assets/datatables/dataTables.bootstrap4.js"></script>
 <script src="../assets/js/demo/datatables-demo.js"></script>
-
 </html>

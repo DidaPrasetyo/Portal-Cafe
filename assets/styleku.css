@@ -196,7 +196,7 @@ img.ikone {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #ffffff;
+  color: white;
   margin-left: 90px;
   padding-top: 75px;
 }
@@ -415,25 +415,27 @@ img.ikone {
   height: 34px;
   margin-top: 80px;
   text-align: center;
-  font-family: Roboto;
+  font-family: 'Noto Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  font-size: 28px;
+  font-size: 22px;
   margin-left: 475px;
   color: #3A3131;
 }
 
 .desc-section {
-  width: 450px;
-  height: 62px;
-  margin-left: 325px;
-  margin-top: 20px;
-  font-family: Roboto;
-  line-height: 29px;
-  font-size: 16px;
-  text-align: center;
-  color: #B3B3B3;
+font-family: 'Noto Sans', sans-serif;
+font-size: 14px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.76;
+letter-spacing: normal;
+color: #b3b3b3;
+text-align: center;
+margin-top: 15px;
+padding-bottom: 15px;
 }
 
 .bg-maps {
@@ -446,14 +448,14 @@ img.ikone {
 }
 
 .btn-map {
-  padding: 20px 40px;
+  padding: 15px 30px;
   border: 2px solid #3D3D49;
   box-sizing: border-box;
   color: #3D3D49;
 }
 
 .btn-map:hover {
-  padding: 20px 40px;
+  padding: 15px 30px;
   border: 0px;
   box-sizing: border-box;
   color: white;

@@ -12,8 +12,7 @@
 			<div class="joedoel">Lokasi</div>
 			<div class="gariss"></div> 
 		</div>
-		
-		<div class="title-section"></div>
+		<div class="title-section">Lokasi Cafe</div>
 		<div class="desc-section">Berikut adalah hal yang bisa anda ketahui tentang Portal Cafe</div>
 		<img src="../assets/img/Cafe.png" class="bg-maps">
 		<div class="alamat-cafe">Portal cafe beralamat di Jl. Kartini, Poncol, 62. Margahayu, City, Rå, Norway, Margahayu, Tambelang, Bekasi City, West Java dengan jam buka dari jam 10AM - 10PM</div>

@@ -5,7 +5,7 @@ class admenu extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('admin_m');
+		$this->load->model('input_m');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url('admin'));
 		}
@@ -36,9 +36,10 @@ class admenu extends CI_Controller {
 		$this->load->view('admin/adm_index',$data);
 	}
 	public function comment(){
-		$get['nama'] = $this->admin_m->get_ulasan();
-		$data['judul'] = "Customer Comment";
-		$data['page'] = $this->load->view('admin/adm_ulasan', $get, TRUE);
+		$table			=	'ulasan';
+		$get['id']		=	$this->input_m->get_data($table);
+		$data['judul']	=	"Customer Comment";
+		$data['page']	=	$this->load->view('admin/adm_ulasan', $get, TRUE);
 		$this->load->view('admin/adm_index',$data);
 	}
 }
