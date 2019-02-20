@@ -34,7 +34,7 @@
                   <td><?php echo ucwords($row->ul_email);?></td>
                   <td><?php echo ucwords($row->ul_ulasan);?></td>
                   <td>
-                    <a title="Delete User" href="<?php echo base_url(); ?>input/delet/<?php echo$row->ul_id; ?>" class="btn btn-small text-danger">
+                    <a title="Delete" href="<?php echo base_url(); ?>input/delet_ul/<?php echo$row->ul_id; ?>" class="btn btn-small text-danger">
                       <i class="fas fa-trash"></i> Hapus
                     </a>
                   </td>

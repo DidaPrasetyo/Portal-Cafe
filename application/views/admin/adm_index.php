@@ -15,7 +15,6 @@
 				</div>
 			</div>
 			<div class="col-xl-10">
-				<div class="profile"></div>
 				<div class="howdy">Halo, <?php echo $this->session->userdata('nama');?></div>
 			</div>
 		</div>
@@ -25,38 +24,39 @@
 			<div class="navigasi">
 				<div class="dashboardd">
 					<a class="nav-db" href="<?php echo base_url(). 'admenu/beranda' ?>">
-						<img class="icon-db" src="../assets/icon/dashboard.png">Dashboard
+						<img class="icon-db" src="../assets/icon/dashboard.png">Beranda
 					</a>
 				</div>
 				<div class="comment">
 					<a class="nav-cm" href="<?php echo base_url(). 'admenu/comment' ?>">
-						<img class="icon-cm" src="../assets/icon/comment.png">Comment
+						<img class="icon-cm" src="../assets/icon/comment.png">Komentar
 					</a>
 				</div>
 				<div class="dropdown">
 					<div class="upload">
-						<a onclick="drpdwFunction()" class="nav-up" href="#">
-							<img class="icon-up" src="../assets/icon/upload.png">Upload
-							<div id="myDropdown" class="dropdown-content">
-								<a href="<?php echo base_url(). 'admenu/addmenu' ?>">Menu</a>
-								<a href="#">Cafe Picture</a>					
-							</div>
+						<a class="nav-up" href="<?php echo base_url(). 'admenu/upload' ?>">
+							<img class="icon-up" src="../assets/icon/upload.png">Unggah
 						</a>
 					</div>
 				</div>
 				<div class="admin">
-					<a class="nav-ad" href="<?php echo base_url(). 'admenu/addadmin' ?>">
-						<img class="icon-ad" src="../assets/icon/admin.png">Admin Web
+					<a class="nav-ad" href="<?php echo base_url(). 'admenu/admin' ?>">
+						<img class="icon-ad" src="../assets/icon/admin.png">User Admin
 					</a>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="col-xl-10">
-				<?php echo $page ?>
+				<?php 
+				if(isset($page2)){
+					echo $page2;
+				} else {
+					echo $page;
+				}
+				?>
 			</div>
 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="../assets/js/dropdown.js"></script>
 </html>

@@ -19,9 +19,9 @@
 			<div class="sub">Tentang Kami</div>
 			<div class="bsub">Berikut adalah hal yang bisa anda ketahui<br>
 			tentang Portal Cafe</div>
-			<img src="../assets/img/a.jpg" class="tntang">
+			<img src="../assets/img/bg-tentang.jpeg" class="tntang">
 			<hr class="liness">
-			<div class="descc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+			<div class="descc">Portal cafe didirikan pd dibekasi tgl 20 sept 2017 owner penamaan portal cafe terinspirasi dari istilah "Portal" para rider di portal oleh saudara2 nya sesama rider pd saat melakukan perjalanan turing di daerah yg dilewati. Pendirian portal cafe tak luput dari support para rider  yg tergabung dalam Max Owner Bekasi yg merupakan komunitas motor yamaha max series yg mana owners merupakan salah satu founder dan ketua umum nya. Portal cafe dg menggunakan konsep tata ruangan yg menonjolkan anak motor nya dan  menggunakan bahan2 dari limbah seperti meja cafe dan kursi2 mengunakan drum dan kayu. Portal cafe menyajikan makanan dan minuman urban serta kopi nusantara yg diolah langsung dimulai proses roasting dan pembuatan serta penyeduhan dg takaran terukur yg menghasil rasa kopi yg nikmat. Portal cafe saat ini telah memiliki 2 tempat /cabang utk mengakomodir permintaan konsumer khusus nya prime konsumer yakni para rider yg selalu menyambangi portal cafe. Portal cafe tak luput pula dikunjungi oleh penikmat kopi yg datang dari daerah2 jakarta dan komunitas2 mobil. </div>
 		</div>
 
 		<div class="review">
@@ -30,30 +30,28 @@
 				<div class="bsub">Mengapa harus portal cafe yang dipilih sebagai<br>tempat nongkrong</div>
 				<div class="carding">
 					<div class="ikon">
-						<img class="ikone" src="../assets/icon/place.svg">
+						<img class="ikone" src="../assets/icon/Cafe.png">
 					</div>
 					<div class="tcard">Tempat yang nyaman</div>
+					<div class="tdesk">Portal Cafe adalah tempat<br>
+						yang nyaman untuk bersantai</div>
+				</div>
+				<div class="carding">
+					<div class="ikon">
+						<img class="ikone" src="../assets/icon/Nongkrong.png">
+					</div>
+					<div class="tcard">Asik buat Nongkrong</div>
 					<div class="tdesk">Portal Cafe adalah tempat<br>
 						yang pas buat nongkrong  bersama<br> 
 					teman - teman</div>
 				</div>
 				<div class="carding">
 					<div class="ikon">
-						<img class="ikone" src="../assets/icon/place.svg">
+						<img class="ikone" src="../assets/icon/Group.png">
 					</div>
-					<div class="tcard">Tempat yang nyaman</div>
-					<div class="tdesk">Portal Cafe adalah tempat<br>
-						yang pas buat nongkrong  bersama<br> 
-					teman - teman</div>
-				</div>
-				<div class="carding">
-					<div class="ikon">
-						<img class="ikone" src="../assets/icon/place.svg">
-					</div>
-					<div class="tcard">Tempat yang nyaman</div>
-					<div class="tdesk">Portal Cafe adalah tempat<br>
-						yang pas buat nongkrong  bersama<br> 
-					teman - teman</div>
+					<div class="tcard">Kopi yang nikmat</div>
+					<div class="tdesk">Portal Cafe menyajikan<br>
+						kopi nusantara yang di olah langsung dengan takaran terukur</div>
 				</div>
 			</div>
 		</div>

@@ -23,51 +23,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/2.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/3.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/4.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/5.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/6.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div class="judul-menu">Menu Minuman</div>
 		<hr>
@@ -75,51 +30,6 @@
 			<div class="menunya">
 				<div class="card">
 					<img class="gambar-menu" src="../assets/img/1.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/2.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/3.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/4.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/5.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
-					</div>
-				</div>
-			</div>
-			<div class="menunya">
-				<div class="card">
-					<img class="gambar-menu" src="../assets/img/6.jpg" alt="Card image">
 					<div class="card-body">
 						<div class="nama-food">Sop Kentang Goreng</div>
 						<div class="harga">IDR 25.000</div>
