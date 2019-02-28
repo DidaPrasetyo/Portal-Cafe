@@ -18,8 +18,8 @@
 			<div class="form-group">
 				<label for="type"> Kategori : </label>
 				<select name="type" class="custom-select" id="type">
-					<option value="food">Makanan</option>
-					<option value="beverages">Minuman</option>
+					<option value="makanan">Makanan</option>
+					<option value="minuman">Minuman</option>
 				</select>
 			</div>
 			<div class="form-group">

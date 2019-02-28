@@ -20,71 +20,78 @@
 								<th>Price</th>
 								<th>Photo</th>
 								<th>Description</th>
+								<th>Type</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach ($product->result() as $product): ?>
-								<tr>
-									<td width="150">
-										<?php echo $product->product_nama ?>
-									</td>
-									<td>
-										<?php echo $product->product_price ?>
-									</td>
-									<td>
-										<img src="<?php echo base_url('img/'.$product->product_pict) ?>" width="64" />
-									</td>
-									<td class="small">
-										<?php echo substr($product->product_desc, 0, 120) ?>...</td>
-										<td width="250">
-											<a title="Edit" href="<?php echo base_url(); ?>input/edit_menu/<?php echo$product->product_id; ?>" class="btn btn-small">
-												<i class="fas fa-edit"></i> Edit
-											</a>
-											<a title="Delete" href="<?php echo base_url(); ?>input/delet_menu/<?php echo$product->product_id; ?>" class="btn btn-small text-danger">
-												<i class="fas fa-trash"></i> Hapus
-											</a>
-										</td>
-									</tr>
-								<?php endforeach; ?>
-							</tbody>
-						</table>
-					</div>
-					<div class="table-responsive">
-						<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Photo</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php foreach ($gallery->result() as $gallery): ?>
+							<?php if(!$product->result() == ''){
+								foreach ($product->result() as $product): ?>
 									<tr>
 										<td width="150">
-											<?php echo $gallery->gallery_name ?>
+											<?php echo $product->product_nama ?>
 										</td>
 										<td>
-											<img src="<?php echo base_url('img/'.$gallery->gallery_pict) ?>" width="64" />
+											<?php echo $product->product_price ?>
 										</td>
-										<td width="250">
-											<a href="<?php echo site_url('input/edit_gallery'.$gallery->gallery_id) ?>"
-												class="btn btn-small"><i class="fas fa-edit"></i> Edit
-											</a>
-											<a onclick="deleteConfirm('<?php echo site_url('input/delet_gallery'.$gallery->gallery_id) ?>')"
-												href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus
-											</a>
+										<td>
+											<img src="<?php echo base_url('img/'.$product->product_pict) ?>" width="130" />
 										</td>
+										<td class="small">
+											<?php echo substr($product->product_desc, 0, 120) ?>...</td>
+											<td width="100"><?php echo $product->product_type ?></td>
+											<td width="150">
+												<a title="Edit" href="<?php echo base_url(); ?>input/edit_menu/<?php echo$product->product_id; ?>" class="btn btn-small">
+													<i class="fas fa-edit"></i> Edit
+												</a>
+												<a title="Delete" href="<?php echo base_url(); ?>input/delet_menu/<?php echo$product->product_id; ?>" class="btn btn-small text-danger">
+													<i class="fas fa-trash"></i> Hapus
+												</a>
+											</td>
+										</tr>
+									<?php endforeach; 
+								} else {?>
+									<td>
+										<?php print('Tidak Ada Data !');}  ?>
+									</td>
+								</tbody>
+							</table>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Photo</th>
+										<th>Action</th>
 									</tr>
-								<?php endforeach; ?>
+								</thead>
+								<tbody>
+									<?php foreach ($gallery->result() as $gallery): ?>
+										<tr>
+											<td width="250">
+												<?php echo $gallery->gallery_name ?>
+											</td>
+											<td width="450">
+												<img src="<?php echo base_url('img/'.$gallery->gallery_pict) ?>" width="130" />
+											</td>
+											<td>
+												<a title="Edit" href="<?php echo base_url(); ?>input/edit_gallery/<?php echo$gallery->gallery_id; ?>" class="btn btn-small">
+													<i class="fas fa-edit"></i> Edit
+												</a>
+												<a title="Delete" href="<?php echo base_url(); ?>input/delet_gallery/<?php echo$gallery->gallery_id; ?>" class="btn btn-small text-danger">
+													<i class="fas fa-trash"></i> Hapus
+												</a>
+											</td>
+										</tr>
+									<?php endforeach; ?>
 
-							</tbody>
-						</table>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>

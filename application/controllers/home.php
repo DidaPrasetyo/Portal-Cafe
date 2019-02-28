@@ -25,8 +25,10 @@ class home extends CI_Controller {
 		$this->load->view('v1_index',$data);
 	}
 	public function menu(){
+		$table			=	'product';
+		$get['id']		=	$this->input_m->get_data($table);
 		$data['judul'] = "Food and Beverages";
-		$data['page'] = $this->load->view('v1_menu', '', TRUE);
+		$data['page'] = $this->load->view('v1_menu', $get, TRUE);
 		$this->load->view('v1_index',$data);
 	}
 	public function contact(){

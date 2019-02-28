@@ -16,27 +16,41 @@
 		<div class="row">
 			<div class="menunya">
 				<div class="card">
-					<img class="gambar-menu" src="../assets/img/1.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
+					<?php 
+					foreach ($id->result() as $product): ?>
+						<img class="gambar-menu" src="<?php 
+						if ($product->product_type == 'makanan'){
+							echo base_url ('img/'.$product->product_pict);
+						}
+						?>" alt="Card image">
+						<div class="card-body">
+							<div class="nama-food"><?php echo $product->product_nama;?></div>
+							<div class="harga">IDR <?php echo $product->product_price; ?><div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<?php endforeach; ?>
 		<div class="judul-menu">Menu Minuman</div>
 		<hr>
 		<div class="row">
 			<div class="menunya">
 				<div class="card">
-					<img class="gambar-menu" src="../assets/img/1.jpg" alt="Card image">
-					<div class="card-body">
-						<div class="nama-food">Sop Kentang Goreng</div>
-						<div class="harga">IDR 25.000</div>
+					<?php 
+					foreach ($id->result() as $product): ?>
+						<img class="gambar-menu" src="<?php 
+						if ($product->product_type == 'minuman'){
+							echo base_url ('img/'.$product->product_pict);
+						}
+						?>" alt="Card image">
+						<div class="card-body">
+							<div class="nama-food"><?php echo $product->product_nama;?></div>
+							<div class="harga">IDR <?php echo $product->product_price; ?><div>
 					</div>
 				</div>
 			</div>
 		</div>
+	<?php endforeach; ?>
 	</div>
 </body>
 </html>

@@ -105,13 +105,14 @@ class input extends CI_Controller {
 			'product_pict'	=>	$img
 		);
 		$this->input_m->add_data($data,'product');
-		redirect('admenu/addmenu');
+		redirect('admenu/upload');
 	}
 	public function delet_menu($product_id){
 		$table	=	'product';
 		$col	=	'product_id';
 		$where	=	$product_id;
 		$this->input_m->delet($table, $col, $where);
+		unlink('img/'.$product->product_pict);
 		redirect('admenu/upload');
 	}
 
@@ -119,7 +120,7 @@ class input extends CI_Controller {
 	//GALLETY CRUD//
 	public function input_gallery(){
 		$config['upload_path']		=	'./img/';
-		$config['allowed_types']	=	'gif|jpg|png';
+		$config['allowed_types']	=	'gif|jpg|png|jpeg';
 		$config['file_name']		=	$this->input->post('name');
 		$config['overwrite']		=	true;
 		// $config['max_width']		= 1024;
@@ -136,13 +137,14 @@ class input extends CI_Controller {
 			'gallery_pict'	=>	$img
 		);
 		$this->input_m->add_data($data,'gallery');
-		redirect('admenu/addcafepict');
+		redirect('admenu/upload');
 	}
 	public function delet_gallery($gallery_id){
 		$table	=	'gallery';
 		$col	=	'gallery_id';
 		$where	=	$gallery_id;
 		$this->input_m->delet($table, $col, $where);
+		unlink('img/'.$gallery->gallery_pict);
 		redirect('admenu/upload');
 	}
 }
