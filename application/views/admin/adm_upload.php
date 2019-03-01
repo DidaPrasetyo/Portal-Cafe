@@ -14,6 +14,7 @@
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+						<h3>TABEL MENU CAFE</h3>
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -41,7 +42,7 @@
 											<?php echo substr($product->product_desc, 0, 120) ?>...</td>
 											<td width="100"><?php echo $product->product_type ?></td>
 											<td width="150">
-												<a title="Edit" href="<?php echo base_url(); ?>input/edit_menu/<?php echo$product->product_id; ?>" class="btn btn-small">
+												<a title="Edit" href="<?php echo base_url(); ?>input/editmenu/<?php echo$product->product_id; ?>" class="btn btn-small">
 													<i class="fas fa-edit"></i> Edit
 												</a>
 												<a title="Delete" href="<?php echo base_url(); ?>input/delet_menu/<?php echo$product->product_id; ?>" class="btn btn-small text-danger">
@@ -59,6 +60,7 @@
 						</div>
 						<div class="table-responsive">
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+								<h3>TABEL GALLERY CAFE</h3>
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -76,7 +78,7 @@
 												<img src="<?php echo base_url('img/'.$gallery->gallery_pict) ?>" width="130" />
 											</td>
 											<td>
-												<a title="Edit" href="<?php echo base_url(); ?>input/edit_gallery/<?php echo$gallery->gallery_id; ?>" class="btn btn-small">
+												<a title="Edit" href="<?php echo base_url(); ?>input/editgallery/<?php echo$gallery->gallery_id; ?>" class="btn btn-small">
 													<i class="fas fa-edit"></i> Edit
 												</a>
 												<a title="Delete" href="<?php echo base_url(); ?>input/delet_gallery/<?php echo$gallery->gallery_id; ?>" class="btn btn-small text-danger">

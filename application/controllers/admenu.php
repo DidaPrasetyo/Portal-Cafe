@@ -35,13 +35,6 @@ class admenu extends CI_Controller {
 		$data['page'] = $this->load->view('admin/add_admin', '', TRUE);
 		$this->load->view('admin/adm_index',$data);
 	}
-	public function editadmin(){
-		$table			=	'admin';
-		$get['id']		=	$this->input_m->get_data($table);
-		$data['judul']	=	"Admin";
-		$data['page']	=	$this->load->view('admin/adm_editadmin', $get, TRUE);
-		$this->load->view('admin/adm_index',$data);
-	}
 
 
 	//UPLOAD//

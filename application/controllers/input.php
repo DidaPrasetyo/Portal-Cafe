@@ -52,20 +52,27 @@ class input extends CI_Controller {
 		redirect('admenu/admin');
 	}
 
-	public function edit_admin(){
-		$name	=	$this->input->post('name');
-		$uname	=	$this->input->post('username');
-		$pass	=	$this->input->post('pass');
+	public function editadmin($user_id){
+		$where = array('user_id' => $user_id);
+		$table = 'admin';
+		$data['admin'] = $this->input_m->get_where($where,$table)->result();
+		$this->load->view('admin/adm_editadmin',$data);
+	}
+
+	public function update_admin(){
+		$user_id	=	$this->input->post('user_id');
+		$name		=	$this->input->post('name');
+		$uname		=	$this->input->post('username');
+		$pass		=	$this->input->post('pass');
 
 		$data = array(
 			'nama'		=>	$name,
 			'username'	=>	$uname,
 			'password'	=>	md5($pass)
 		);
-		$table	=	'admin';
-		$col	=	'user_id';
-		$where	=	$user_id;
-		$this->input_m->edit($table, $col, $where, $data);
+		$where = array('user_id' => $user_id);
+		$table = 'admin';
+		$this->input_m->edit($where, $data, $table);
 		redirect('admenu/admin');
 	}
 
@@ -107,12 +114,56 @@ class input extends CI_Controller {
 		$this->input_m->add_data($data,'product');
 		redirect('admenu/upload');
 	}
+
+	public function editmenu($product_id){
+		$where = array('product_id' => $product_id);
+		$table = 'product';
+		$data['product'] = $this->input_m->get_where($where,$table)->result();
+		$this->load->view('admin/edit_menu',$data);
+	}
+
+	public function update_menu(){
+		$config['upload_path']		=	'./img/';
+		$config['allowed_types']	=	'gif|jpg|png';
+		$config['file_name']		=	$this->input->post('name');
+		$config['overwrite']		=	true;
+		// $config['max_width']		= 1024;
+		// $config['max_height']	= 768;
+
+		$this->load->library('upload', $config);
+		if (!empty($_FILES["img"]["name"])) {
+			$this->upload->do_upload('img');
+			$this->upload->data();
+			$img	=	$this->upload->data("file_name");
+		} else {
+			$img	=	$this->input->post('old');
+		}
+
+		$product_id	=	$this->input->post('product_id');
+		$name		=	$this->input->post('name');
+		$price		=	$this->input->post('price');
+		$desc		=	$this->input->post('desc');
+		$type		=	$this->input->post('type');
+		
+		$data = array(
+			'product_nama'	=>	$name,
+			'product_price'	=>	$price,
+			'product_desc'	=>	$desc,
+			'product_type'	=>	$type,
+			'product_pict'	=>	$img
+		);
+		$where = array('product_id' => $product_id);
+		$table = 'product';
+		$this->input_m->edit($where, $data, $table);
+		redirect('admenu/upload');
+	}
+
 	public function delet_menu($product_id){
 		$table	=	'product';
 		$col	=	'product_id';
 		$where	=	$product_id;
-		$this->input_m->delet($table, $col, $where);
 		unlink('img/'.$product->product_pict);
+		$this->input_m->delet($table, $col, $where);
 		redirect('admenu/upload');
 	}
 
@@ -139,12 +190,49 @@ class input extends CI_Controller {
 		$this->input_m->add_data($data,'gallery');
 		redirect('admenu/upload');
 	}
+
+	public function editgallery($gallery_id){
+		$where = array('gallery_id' => $gallery_id);
+		$table = 'gallery';
+		$data['gallery'] = $this->input_m->get_where($where,$table)->result();
+		$this->load->view('admin/edit_gallery',$data);
+	}
+
+	public function update_gallery(){
+		$config['upload_path']		=	'./img/';
+		$config['allowed_types']	=	'gif|jpg|png';
+		$config['file_name']		=	$this->input->post('name');
+		$config['overwrite']		=	true;
+		// $config['max_width']		= 1024;
+		// $config['max_height']	= 768;
+
+		$this->load->library('upload', $config);
+		if (!empty($_FILES["img"]["name"])) {
+			$this->upload->do_upload('img');
+			$this->upload->data();
+			$img	=	$this->upload->data("file_name");
+		} else {
+			$img	=	$this->input->post('old');
+		}
+
+		$name	=	$this->input->post('name');
+
+		$data = array(
+			'gallery_name'	=>	$name,
+			'gallery_pict'	=>	$img
+		);
+		$where = array('gallery_id' => $gallery_id);
+		$table = 'gallery';
+		$this->input_m->edit($where, $data, $table);
+		redirect('admenu/upload');
+	}
+
 	public function delet_gallery($gallery_id){
 		$table	=	'gallery';
 		$col	=	'gallery_id';
 		$where	=	$gallery_id;
+		unlink('img/'.$gallery_pict);
 		$this->input_m->delet($table, $col, $where);
-		unlink('img/'.$gallery->gallery_pict);
 		redirect('admenu/upload');
 	}
 }

@@ -31,10 +31,10 @@
                     <td><?php echo ucwords($row->username);?></td>
                     <td><?php echo ucwords($row->nama);?></td>
                     <td>
-                      <a title="Edit" href="<?php echo base_url(); ?>input/edit_admin/<?php echo$row->user_id; ?>" class="btn btn-small">
+                      <a title="Edit" href="<?php echo base_url(); ?>input/editadmin/<?php echo $row->user_id; ?>" class="btn btn-small">
                         <i class="fas fa-edit"></i> Edit
                       </a>
-                      <a title="Delete" href="<?php echo base_url(); ?>input/delet_admin/<?php echo$row->user_id; ?>" class="btn btn-small text-danger">
+                      <a title="Delete" href="<?php echo base_url(); ?>input/delet_admin/<?php echo $row->user_id; ?>" class="btn btn-small text-danger">
                         <i class="fas fa-trash"></i> Hapus
                       </a>
                     </td>

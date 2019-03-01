@@ -2,7 +2,7 @@
 
 class input_m extends CI_Model{
 
-	function get_where($table,$where){		
+	function get_where($where,$table){		
 		return $this->db->get_where($table,$where);
 	}
 	function get_data($table){
@@ -15,8 +15,8 @@ class input_m extends CI_Model{
 		$this->db->where($col, $where);
 		$this->db->delete($table);
 	}
-	function edit($table,$col,$where,$data){
-		$this->db->where($col,$where);
+	function edit($where,$data,$table){
+		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
 }

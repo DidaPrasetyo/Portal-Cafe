@@ -2,25 +2,26 @@
 <html>
 <body>
 	<?php 
-	foreach ($id->result() as $row) {
+	foreach ($admin as $row) {
 		?>
 		<div class="form">
-			
-			<form method="POST" action="<?php echo base_url(). 'input/edit_admin'?>" enctype="multipart/form-data">
+			<form method="POST" action="<?php echo base_url(). 'input/update_admin'?>" enctype="multipart/form-data">
+				<input type="hidden" name="user_id" value="<?php echo $row->user_id ?>">
 				<div class="form-group">
 					<label for="name"> Nama : </label>
 					<input type="text" class="form-control" id="name" name="name" value="<?php echo $row->nama?>">
 				</div>
 				<div class="form-group">
-					<label for="uname"> Username : </label>
-					<input type="text" class="form-control" id="uname" name="username" value="<?php echo $row->username?>">
+					<label for="username"> Username : </label>
+					<input type="text" class="form-control" id="username" name="username" value="<?php echo $row->username?>">
 				</div>
 				<div class="form-group">
-					<label for="pwd"> Password : </label>
-					<input type="password" class="form-control" id="pwd" name="pass" value="<?php echo $row->password?>">
+					<label for="password"> Password : </label>
+					<input type="password" class="form-control" id="password" name="pass">
 				</div>
 				<button type="submit" class="btn btn-outline-secondary">Submit</button>
 			</form>
 		</div>
-	</body>
-	</html>
+	<?php } ?>
+</body>
+</html>

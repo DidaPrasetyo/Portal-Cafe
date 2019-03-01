@@ -23,7 +23,7 @@ class admin extends CI_Controller {
 			'username' => $username,
 			'password' => md5($password)
 		);
-		$cek = $this->input_m->get_where("admin",$where)->num_rows();
+		$cek = $this->input_m->get_where($where,"admin")->num_rows();
 		if($cek > 0){
 
 			$data_session = array(
